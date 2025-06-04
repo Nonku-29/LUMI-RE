@@ -1,0 +1,2140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumiére Aesthetics | Medical-Grade Cosmetic Treatments in Vaal</title>
+    <meta name="description" content="Expert aesthetic treatments in Vaal, performed by board-certified specialists. Natural results, minimal downtime.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <style>
+        /* ===== Variables ===== */
+        :root {
+            --primary: #7E57C2; /* Deep Purple */
+            --primary-dark: #5E35B1;
+            --primary-light: #B39DDB;
+            --secondary: #FF80AB; /* Pink */
+            --accent: #8BC34A; /* Green */
+            --dark: #263238; /* Bluish Grey */
+            --darker: #1A237E; /* Indigo */
+            --light: #ECEFF1; /* Light Grey */
+            --white: #FFFFFF;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+            --border-radius: 12px; /* Slightly larger radius */
+        }
+
+        /* ===== Base Styles ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+            line-height: 1.7; /* Increased for readability */
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        h2 { font-size: 2.8rem; }
+        h3 { font-size: 1.8rem; }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--border-radius); /* Apply border radius to images */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 7rem 0; /* Increased padding */
+            overflow: hidden; /* For AOS animations */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ===== Buttons ===== */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: #FF4081; /* Darker pink */
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+        .btn-lg {
+            padding: 1.2rem 3rem;
+            font-size: 1rem;
+        }
+
+        /* ===== Header ===== */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        header.scrolled {
+            padding: 1rem 0;
+            box-shadow: var(--shadow-md);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem; /* Increased gap */
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            color: var(--dark);
+            padding-bottom: 5px; /* space for underline */
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover:after, .nav-link.active:after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem; /* Larger icon */
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            height: 100vh;
+            min-height: 750px; /* Adjusted min-height */
+            background: linear-gradient(rgba(42, 45, 59, 0.8), rgba(42, 45, 59, 0.8)), 
+                        url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 850px; /* Wider content */
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4.8rem); /* Slightly larger */
+            margin-bottom: 2rem;
+            line-height: 1.1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem; /* Larger paragraph */
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem; /* Increased gap */
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 2.5rem; /* Lowered */
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 1.8rem; /* Larger icon */
+            animation: bounce 2s infinite;
+            width: 60px; /* Larger circle */
+            height: 60px;
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .scroll-down:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(-50%) translateY(-3px);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-25px) translateX(-50%); } /* Increased bounce */
+            60% { transform: translateY(-12px) translateX(-50%); }
+        }
+        
+        /* Initial animation for hero content (if not using AOS for this specifically) */
+        .hero-content .animated-item {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInDelay 1s ease forwards;
+        }
+        .hero-content h1.animated-item { animation-delay: 0.3s; }
+        .hero-content p.animated-item { animation-delay: 0.6s; }
+        .hero-content .hero-buttons.animated-item { animation-delay: 0.9s; }
+
+        @keyframes fadeInDelay {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* ===== Stats Bar ===== */
+        .stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            margin-top: -5px; /* Overlap slightly if hero has rounded bottom or for effect */
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem; /* Increased gap */
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem 1.5rem; /* More padding */
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(5px);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-8px); /* Increased hover effect */
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stat-number {
+            font-size: 2.8rem; /* Slightly larger */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        /* ===== Section Header ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem; /* Increased margin */
+        }
+
+        .section-header h2 {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px; /* Adjusted position */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px; /* Wider underline */
+            height: 4px; /* Thicker underline */
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            max-width: 750px; /* Wider paragraph */
+            margin: 1.5rem auto 0; /* Added top margin */
+            font-size: 1.15rem;
+            color: var(--dark);
+            opacity: 0.9;
+        }
+        
+        /* ===== About Section ===== */
+        .about {
+            background: var(--light);
+            position: relative;
+        }
+
+        .about-container {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr; /* Adjusted column ratio */
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-img-wrapper {
+            position: relative;
+        }
+        .about-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .about-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            z-index: 2;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .about-badge-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .about-badge-text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content h2 {
+            color: var(--primary);
+        }
+        .about-content .lead {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+
+
+        .about-features {
+            margin: 2.5rem 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem; /* Increased margin */
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 55px; /* Larger icon */
+            height: 55px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            font-size: 1.4rem; /* Larger icon font */
+            transition: var(--transition);
+        }
+        .feature-item:hover .feature-icon {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+
+        .feature-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .feature-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: var(--white);
+        }
+        .why-choose-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .why-choose-item {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border: 1px solid var(--light);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            background: var(--white);
+        }
+        .why-choose-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .why-choose-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: var(--transition);
+        }
+        .why-choose-item:hover .why-choose-icon {
+            transform: scale(1.1);
+            color: var(--secondary);
+        }
+        .why-choose-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        .why-choose-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+
+        /* ===== Services Section ===== */
+        .services {
+            background: var(--light); /* Changed background for variety */
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger minmax */
+            gap: 2.5rem; /* Increased gap */
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px); /* Increased hover effect */
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-img {
+            height: 220px; /* Taller image area */
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease; /* Smoother image zoom */
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 2rem; /* Increased padding */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.6rem; /* Larger heading */
+        }
+        .service-content > p { /* Target direct p child for description */
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .service-features {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem; /* Spacing */
+            font-size: 0.95rem;
+        }
+
+        .service-features i {
+            color: var(--accent);
+            margin-right: 0.75rem; /* Spacing */
+            font-size: 1.1rem;
+        }
+
+        .service-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto; /* Pushes to bottom */
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--light);
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.3rem; /* Larger price */
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ===== Before & After Gallery ===== */
+        .gallery {
+            background: var(--white);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem; /* Increased gap */
+        }
+
+        .ba-card {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md); /* Slightly stronger shadow */
+            transition: var(--transition);
+        }
+
+        .ba-card:hover {
+            transform: translateY(-8px); /* Increased hover effect */
+            box-shadow: var(--shadow-lg);
+        }
+
+        .ba-img {
+            height: 380px; /* Taller images */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ba-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .ba-card:hover .ba-img img {
+            transform: scale(1.05);
+        }
+
+        .ba-label {
+            position: absolute;
+            bottom: 0;
+            left:0;
+            width: 100%;
+            padding: 1.2rem; /* More padding */
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); /* Gradient for better text readability */
+            color: var(--white);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .ba-card:hover .ba-label {
+            background: linear-gradient(to top, rgba(var(--primary-rgb, 126, 87, 194),0.9) 0%, rgba(var(--primary-rgb,126, 87, 194),0.2) 100%);
+        }
+
+
+        /* ===== CTA Section ===== */
+        .cta {
+            background: linear-gradient(rgba(var(--primary-rgb, 126, 87, 194), 0.9), rgba(var(--primary-dark-rgb, 94, 53, 177), 0.95)), 
+                        url('https://images.unsplash.com/photo-1551836022-d5d9e2e4e8b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 7rem 0;
+        }
+        /* Helper for RGB vars */
+        :root {
+            --primary-rgb: 126, 87, 194;
+            --primary-dark-rgb: 94, 53, 177;
+        }
+
+
+        .cta h2 {
+            color: var(--white);
+            font-size: 2.8rem; /* Larger heading */
+            margin-bottom: 2rem;
+        }
+
+        .cta p {
+            max-width: 750px;
+            margin: 0 auto 3rem; /* Increased bottom margin */
+            opacity: 0.95; /* More opaque */
+            font-size: 1.2rem;
+        }
+        .cta .btn-primary { /* Specific CTA button styling */
+            background: var(--secondary);
+            color: var(--white);
+            border: 2px solid var(--secondary);
+        }
+        .cta .btn-primary:hover {
+            background: var(--white);
+            color: var(--secondary);
+            border-color: var(--white);
+        }
+
+        /* ===== Team Section ===== */
+        .team {
+            background: var(--light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax */
+            gap: 3rem;
+        }
+
+        .team-card {
+            text-align: center;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-img {
+            height: 320px; /* Taller image */
+            overflow: hidden;
+        }
+
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center; /* Ensure faces are visible */
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover .team-img img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 2.5rem 1.5rem; /* More padding */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .team-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+
+        .team-info .team-title { /* Changed p to span or dedicated class */
+            color: var(--secondary);
+            font-weight: 600; /* Bolder title */
+            margin-bottom: 1rem;
+            display: block; /* Ensure it takes its own line */
+            font-size: 1rem;
+        }
+        .team-info .team-bio {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem; /* Increased gap */
+            margin-top: auto; /* Pushes to bottom if content is short */
+        }
+
+        .team-social a {
+            width: 40px; /* Larger icons */
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .team-social a:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* ===== Testimonials ===== */
+        .testimonials {
+            background: var(--white); /* Changed for variety */
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted minmax */
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: var(--light); /* Light background for cards */
+            padding: 2.5rem; /* More padding */
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-card:before {
+            content: '\f10d'; /* FontAwesome quote icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            font-size: 3rem; /* Smaller quote */
+            color: var(--primary-light);
+            opacity: 0.5; /* More subtle */
+            z-index: 0;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 2rem; /* Increased margin */
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .author-img {
+            width: 65px; /* Larger image */
+            height: 65px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1.5rem; /* Increased margin */
+            border: 3px solid var(--primary-light);
+            box-shadow: var(--shadow-sm);
+        }
+        .author-img img {
+            border-radius: 50%; /* Ensure inner image is also round if not already */
+        }
+
+        .author-info h4 {
+            margin-bottom: 0.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .rating {
+            color: var(--secondary); /* Gold color for stars */
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* ===== FAQ Section ===== */
+        .faq {
+            background-color: var(--light);
+        }
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .faq-item summary {
+            padding: 1.5rem 2rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2rem;
+            color: var(--primary);
+            transition: background-color 0.3s ease;
+        }
+        .faq-item summary:hover {
+            background-color: #f8f9fa;
+        }
+        .faq-item summary::after {
+            content: '\f078'; /* FontAwesome chevron-down */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            transition: transform 0.3s ease;
+        }
+        .faq-item[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .faq-item div { /* Content of the FAQ */
+            padding: 0 2rem 1.5rem 2rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        .faq-item[open] summary {
+            border-bottom: 1px solid var(--light);
+        }
+
+
+        /* ===== Booking Section (formerly Contact) ===== */
+        .booking { /* Renamed from .contact */
+            background: var(--white);
+        }
+
+        .booking-container { /* Renamed from .contact-container */
+            display: grid;
+            grid-template-columns: 1fr 1.2fr; /* Adjusted ratio */
+            gap: 5rem; /* Increased gap */
+            align-items: flex-start;
+        }
+
+        .booking-info h3 { /* Renamed from .contact-info */
+            color: var(--primary);
+            margin-bottom: 2rem; /* Increased margin */
+            font-size: 2rem;
+        }
+
+        .booking-item { /* Renamed from .contact-item */
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem; /* Increased margin */
+        }
+
+        .booking-icon { /* Renamed from .contact-icon */
+            width: 55px; /* Larger icon */
+            height: 55px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            font-size: 1.3rem;
+        }
+
+        .booking-text h4 { /* Renamed from .contact-text */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .booking-text p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .booking-form .form-group { /* Renamed from .contact-form */
+            margin-bottom: 1.8rem; /* Increased margin */
+        }
+
+        .booking-form label {
+            display: block;
+            margin-bottom: 0.75rem; /* Increased margin */
+            font-weight: 600; /* Bolder label */
+            font-size: 0.95rem;
+        }
+
+        .booking-form input,
+        .booking-form textarea,
+        .booking-form select {
+            width: 100%;
+            padding: 1.2rem; /* More padding */
+            border: 1px solid #ced4da; /* Softer border */
+            border-radius: var(--border-radius);
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .booking-form input:focus,
+        .booking-form textarea:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(126, 87, 194, 0.25);
+        }
+
+        .booking-form textarea {
+            min-height: 160px; /* Taller textarea */
+            resize: vertical;
+        }
+        .booking-form button[type="submit"] {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1rem;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: var(--dark); /* Darker footer */
+            color: rgba(255,255,255,0.8); /* Softer white */
+            padding: 6rem 0 2rem; /* Increased padding */
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+            gap: 3rem;
+            margin-bottom: 4rem; /* Increased margin */
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            font-size: 1.5rem; /* Larger heading */
+            margin-bottom: 2rem; /* Increased margin */
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px; /* Wider underline */
+            height: 3px; /* Thicker underline */
+            background: var(--primary);
+            border-radius: 1px;
+        }
+
+        .footer-col p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem; /* Increased spacing */
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7); /* Softer link color */
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 8px; /* More noticeable hover indent */
+        }
+
+        .footer-contact-info li { /* Renamed class for clarity */
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+
+        .footer-contact-info i {
+            margin-right: 1.2rem; /* Increased spacing */
+            color: var(--primary);
+            margin-top: 5px; /* Align icon better with text */
+            width: 20px; /* Fixed width for alignment */
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.2rem; /* Increased gap */
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px; /* Larger icons */
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-4px) scale(1.05); /* More pronounced hover */
+            box-shadow: var(--shadow-md);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem; /* Increased padding */
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .footer-bottom a {
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-bottom a:hover {
+            color: var(--primary);
+        }
+
+
+        /* ===== Responsive Styles ===== */
+        @media (max-width: 992px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-img-wrapper {
+                max-width: 500px;
+                margin: 0 auto 2rem auto; /* Add bottom margin when stacked */
+            }
+            .about-badge {
+                right: 10px;
+                bottom: -20px;
+            }
+
+            .booking-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .booking-info {
+                margin-bottom: 0; /* Remove extra margin when stacked */
+            }
+        }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 2.4rem; }
+            h3 { font-size: 1.6rem; }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1001; /* Above nav links */
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0; /* Align to top */
+                left: 0;
+                width: 100%;
+                height: 100vh; /* Full height */
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center; /* Center links vertically */
+                padding: 2rem;
+                box-shadow: var(--shadow-md);
+                transform: translateX(100%); /* Slide from right */
+                transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+                z-index: 1000;
+                gap: 2.5rem; /* Space out links */
+            }
+            .nav-links.active {
+                transform: translateX(0);
+            }
+            .nav-link {
+                font-size: 1.5rem; /* Larger links for mobile */
+            }
+            
+            .hero {
+                min-height: 650px;
+                background-position: center right; /* Adjust background for mobile if needed */
+            }
+            .hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+            .hero p { font-size: 1.1rem; }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1.2rem;
+                align-items: center;
+            }
+            
+            .btn {
+                width: auto; /* Allow buttons to size naturally */
+                min-width: 250px; /* But give them a min-width */
+            }
+            .hero-buttons .btn {
+                width: 80%;
+                max-width: 300px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            .stat-item { padding: 1.5rem 1rem; }
+            .stat-number { font-size: 2rem; }
+
+            .section-header h2:after {
+                width: 80px;
+                height: 3px;
+            }
+            .section-header p { font-size: 1.05rem; }
+
+            .services-grid, .gallery-container, .team-grid, .testimonial-grid, .why-choose-us-grid {
+                grid-template-columns: 1fr; /* Stack cards on smaller screens */
+            }
+            .booking-container {
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1rem; /* Less padding on very small screens */
+            }
+            section {
+                padding: 5rem 0; /* Less section padding */
+            }
+            .hero { padding-top: 100px; } /* Account for fixed header */
+
+            .logo { font-size: 1.5rem; }
+            .logo i { font-size: 1.3rem; }
+
+            .about-badge {
+                font-size: 0.8rem;
+                padding: 1rem;
+                bottom: -15px;
+                right: 5px;
+            }
+            .about-badge-number { font-size: 2rem; }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-col h3:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .social-links {
+                justify-content: center;
+            }
+            .footer-contact-info li {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-spa"></i>
+                LUMIÉRE
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#why-choose-us" class="nav-link">Why Us</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#results" class="nav-link">Results</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#booking" class="nav-link">Contact</a>
+                <a href="#booking" class="btn btn-primary">Book Now</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu" aria-expanded="false" aria-controls="navLinks">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="animated-item">Elevate Your Natural Beauty in Vaal</h1>
+            <p class="animated-item">Discover medical-grade aesthetic treatments designed for radiant, natural-looking results. Our board-certified specialists in Vaal offer personalized care with minimal downtime.</p>
+            <div class="hero-buttons animated-item">
+                <a href="#booking" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-check"></i> Book Consultation
+                </a>
+                <a href="#services" class="btn btn-outline btn-lg">
+                    <i class="fas fa-list"></i> Explore Treatments
+                </a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-number" data-count="12000">0</div>
+                    <div class="stat-label">Procedures Performed</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">Client Satisfaction (%)</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-count="5000">0</div> <!-- Example: Happy Clients -->
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-img-wrapper" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Lumiére Aesthetics Clinic Interior" class="about-img">
+                <div class="about-badge">
+                    <div class="about-badge-number">10+</div>
+                    <div class="about-badge-text">Years of Excellence</div>
+                </div>
+            </div>
+            
+            <div class="about-content" data-aos="fade-left">
+                <h2 class="section-subtitle">Welcome to Lumiére Aesthetics</h2>
+                <p class="lead">Your trusted partner for advanced aesthetic care in the heart of Vaal.</p>
+                <p>Founded with a passion for enhancing natural beauty and promoting confidence, Lumiére Aesthetics has established itself as a premier destination for non-surgical cosmetic enhancements in the Vaal region. Our medical director leads a team of dedicated professionals committed to providing exceptional care.</p>
+                
+                <h4>Our Philosophy</h4>
+                <p>We believe that aesthetic treatments should be subtle, enhancing your unique features rather than altering them. Our approach is rooted in safety, artistry, and cutting-edge technology to deliver results that are both beautiful and natural-looking.</p>
+
+                <div class="about-features">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i> <!-- Changed icon -->
+                        </div>
+                        <div>
+                            <h3>Expert Medical Team</h3>
+                            <p>All treatments are performed by licensed medical professionals with specialized aesthetic training and a keen eye for detail.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i> <!-- Changed icon -->
+                        </div>
+                        <div>
+                            <h3>Clinically Proven Treatments</h3>
+                            <p>We exclusively offer Health Authority-approved procedures with robust clinical evidence supporting their safety and efficacy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i> <!-- Changed icon -->
+                        </div>
+                        <div>
+                            <h3>Personalized Care Journey</h3>
+                            <p>Your experience is tailored from start to finish, with custom treatment plans designed to meet your individual anatomy and aesthetic aspirations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#team" class="btn btn-primary">Meet Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Choose Lumiére Aesthetics?</h2>
+                <p>Experience the Lumiére difference, where science meets artistry for exceptional results.</p>
+            </div>
+            <div class="why-choose-us-grid">
+                <div class="why-choose-item" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="why-choose-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Cutting-Edge Technology</h3>
+                    <p>We invest in the latest advancements in aesthetic technology to provide safe, effective, and comfortable treatments.</p>
+                </div>
+                <div class="why-choose-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="why-choose-icon"><i class="fas fa-balance-scale-right"></i></div>
+                    <h3>Natural-Looking Results</h3>
+                    <p>Our philosophy centers on enhancing your unique beauty, aiming for subtle refinements that look and feel natural.</p>
+                </div>
+                <div class="why-choose-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="why-choose-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Safety First Approach</h3>
+                    <p>Your well-being is our top priority. We adhere to the highest medical standards and protocols for all procedures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Signature Treatments</h2>
+                <p>Explore our comprehensive range of non-surgical cosmetic procedures designed to rejuvenate your appearance with minimal downtime and lasting results.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: Neurotoxin Injections -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Neurotoxin Injections (Botox/Dysport) Treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3>Neurotoxin Injections</h3>
+                        <p>Smooth away wrinkles and fine lines caused by facial expressions. Ideal for crow's feet, forehead lines, and frown lines, using approved formulations like Botox® or Dysport®.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Quick 10-15 minute procedure</li>
+                            <li><i class="fas fa-check"></i> Visible results in 3-10 days</li>
+                            <li><i class="fas fa-check"></i> Effects last 3-4 months</li>
+                            <li><i class="fas fa-check"></i> Minimal to no downtime</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">From R180/unit</span> <!-- ZAR Price -->
+                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Dermal Fillers -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-img">
+                        <img src="data:image/jpeg;base64,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" alt="Dermal Fillers Treatment for Facial Contouring">
+                    </div>
+                    <div class="service-content">
+                        <h3>Dermal Fillers</h3>
+                        <p>Restore lost volume, enhance facial contours, and soften deeper lines. Hyaluronic acid-based fillers for cheeks, lips, jawline, and nasolabial folds.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Often immediate, natural-looking results</li>
+                            <li><i class="fas fa-check"></i> Minimal discomfort with topical anesthetic</li>
+                            <li><i class="fas fa-check"></i> Longevity from 6-18+ months</li>
+                            <li><i class="fas fa-check"></i> Tailored to your facial anatomy</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">From R9750/syringe</span> <!-- ZAR Price -->
+                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3: Laser Skin Resurfacing -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-img">
+                        <img src="data:image/jpeg;base64,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" alt="Laser Skin Resurfacing Procedure">
+                    </div>
+                    <div class="service-content">
+                        <h3>Laser Skin Resurfacing</h3>
+                        <p>Advanced fractional laser technology to improve skin texture, tone, reduce pigmentation, acne scars, and signs of aging by stimulating collagen production.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Stimulates new collagen growth</li>
+                            <li><i class="fas fa-check"></i> Treats sun damage, age spots, and scars</li>
+                            <li><i class="fas fa-check"></i> Improvement over several sessions</li>
+                            <li><i class="fas fa-check"></i> Customizable intensity and downtime</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">From R6000/session</span> <!-- ZAR Price -->
+                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Chemical Peels (New) -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-img">
+                        <img src="data:image/jpeg;base64,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" alt="Chemical Peel Treatment">
+                    </div>
+                    <div class="service-content">
+                        <h3>Chemical Peels</h3>
+                        <p>Exfoliate and rejuvenate your skin with customized chemical peels. Addresses concerns like acne, pigmentation, fine lines, and dullness for a brighter complexion.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Improves skin texture and tone</li>
+                            <li><i class="fas fa-check"></i> Variety of strengths available</li>
+                            <li><i class="fas fa-check"></i> Minimal to moderate downtime</li>
+                            <li><i class="fas fa-check"></i> Suitable for various skin types</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">From R1200/peel</span> <!-- ZAR Price Example -->
+                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 5: Microneedling (New) -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-img">
+                        <img src="data:image/jpeg;base64,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" alt="Microneedling (Collagen Induction Therapy)">
+                    </div>
+                    <div class="service-content">
+                        <h3>Microneedling (CIT)</h3>
+                        <p>Collagen Induction Therapy (CIT) creates micro-channels to stimulate natural collagen and elastin production, improving scars, wrinkles, and overall skin quality.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Enhances product absorption</li>
+                            <li><i class="fas fa-check"></i> Reduces appearance of scars & pores</li>
+                            <li><i class="fas fa-check"></i> Improves skin firmness and elasticity</li>
+                            <li><i class="fas fa-check"></i> Can be combined with PRP</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">From R2500/session</span> <!-- ZAR Price Example -->
+                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Service 6: Add another one if you like -->
+                 <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-img">
+                        <img src="data:image/jpeg;base64,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" alt="IV Drip Therapy">
+                    </div>
+                    <div class="service-content">
+                        <h3>IV Drip Therapy</h3>
+                        <p>Boost your wellness from within. Our IV drips deliver essential vitamins, minerals, and antioxidants directly into your bloodstream for enhanced energy, immunity, and skin health.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Customized nutrient blends</li>
+                            <li><i class="fas fa-check"></i> Promotes hydration and detoxification</li>
+                            <li><i class="fas fa-check"></i> Supports overall well-being</li>
+                            <li><i class="fas fa-check"></i> Relaxing 30-60 minute session</li>
+                        </ul>
+                        <div class="service-price">
+                            <span class="price">From R950/drip</span> <!-- ZAR Price Example -->
+                            <a href="#booking" class="btn btn-secondary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Gallery -->
+    <section class="gallery" id="results">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Real Results, Real Confidence</h2>
+                <p>Witness the transformative power of our treatments through genuine before and after photos of our valued clients. Individual results may vary.</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="ba-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="ba-img">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/botox-ba-01-67f41176dd4df.jpg?resize=980:*" alt="Before and After Botox Treatment">
+                        <div class="ba-label">Neurotoxin (Botox®) - Forehead Lines</div>
+                    </div>
+                </div>
+                
+                <div class="ba-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="ba-img">
+                        <img src="https://accentonskin.co.nz/wp-content/uploads/2019/11/Dermal-Fillers1.jpg" alt="Before and After Dermal Filler Lip Enhancement">
+                        <div class="ba-label">Dermal Filler - Lip Enhancement</div>
+                    </div>
+                </div>
+                
+                <div class="ba-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="ba-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVZLCj_zsaqBIJc-PFHS-Ugqft2j5T0fDh1Q&s" alt="Before and After Laser Skin Resurfacing for Texture">
+                        <div class="ba-label">Laser Resurfacing - Skin Texture Improvement</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container" data-aos="fade-up">
+            <h2>Ready to Begin Your Transformation?</h2>
+            <p>Schedule your complimentary, no-obligation consultation with our aesthetic specialists today. Let's discuss your goals and craft a personalized treatment plan to reveal your most radiant self.</p>
+            <a href="#booking" class="btn btn-primary btn-lg">
+                <i class="fas fa-calendar-alt"></i> Book Your Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Meet Our Dedicated Specialists</h2>
+                <p>Our team of board-certified medical professionals combines artistry with advanced techniques to deliver exceptional, natural-looking results in a caring environment.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Dr. Sarah Chen, Medical Director">
+                    </div>
+                    <div class="team-info">
+                        <div>
+                            <h3>Dr. Elara Vance</h3>
+                            <p class="team-title">Medical Director & Founder</p>
+                            <p class="team-bio">Dr. Vance is a board-certified dermatologist with over 12 years of experience in cosmetic dermatology. She is passionate about creating subtle, impactful results.</p>
+                        </div>
+                        <div class="team-social">
+                            <a href="#" aria-label="Dr. Vance LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Dr. Vance Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Thembi Khumalo, Aesthetic Nurse Practitioner">
+                    </div>
+                    <div class="team-info">
+                        <div>
+                            <h3>Thembi Khumalo</h3>
+                            <p class="team-title">Aesthetic Nurse Practitioner</p>
+                            <p class="team-bio">Thembi specializes in injectables and laser treatments, combining her clinical expertise with an artistic eye for facial harmony and rejuvenation.</p>
+                        </div>
+                        <div class="team-social">
+                            <a href="#" aria-label="Thembi Khumalo LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Thembi Khumalo Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Dr. Ben Carter, Visiting Specialist">
+                    </div>
+                    <div class="team-info">
+                        <div>
+                            <h3>Dr. Ben Carter</h3>
+                            <p class="team-title">Aesthetic Physician</p>
+                            <p class="team-bio">Dr. Carter is an expert in advanced non-surgical facial rejuvenation techniques, focusing on holistic and patient-centered treatment plans.</p>
+                        </div>
+                        <div class="team-social">
+                            <a href="#" aria-label="Dr. Carter LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Dr. Carter Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>What Our Patients Say</h2>
+                <p>Hear directly from our clients about their experiences and transformations at Lumiére Aesthetics.</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"After having Neurotoxin injections at Lumiére, I look refreshed but completely natural. The staff made me feel so comfortable and explained everything thoroughly. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-img"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=60" alt="Jessica T."></div>
+                            <div class="author-info"><h4>Jessica T.</h4><p>Neurotoxin Client</p></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The laser treatments completely transformed my skin. My acne scars have faded significantly, and my complexion has never looked better. The team was professional and caring."</p>
+                        <div class="testimonial-author">
+                            <div class="author-img"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=60" alt="Sophia L."></div>
+                            <div class="author-info"><h4>Lerato M.</h4><p>Laser Treatment Client</p></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"I was nervous about fillers, but Dr. Vance made me feel completely at ease. The results are subtle yet make me look 5 years younger! So happy with my experience."</p>
+                        <div class="testimonial-author">
+                            <div class="author-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=60" alt="Michael R."></div>
+                            <div class="author-info"><h4>David P.</h4><p>Dermal Filler Client</p></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add a fourth testimonial if available 
+                 <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The IV Drip Therapy was a game-changer for my energy levels. The clinic is beautiful, and the staff are incredibly knowledgeable and friendly. I feel revitalized!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-img"><img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=60" alt="Aisha K."></div>
+                            <div class="author-info"><h4>Aisha K.</h4><p>IV Drip Client</p></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our treatments and procedures.</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item" data-aos="fade-up">
+                    <summary>What can I expect during my first consultation?</summary>
+                    <div>
+                        <p>Your first consultation is a comprehensive discussion with one of our specialists. We'll discuss your aesthetic goals, medical history, and assess your suitability for various treatments. We'll then create a personalized treatment plan and answer all your questions. This consultation is complimentary and carries no obligation.</p>
+                    </div>
+                </details>
+                <details class="faq-item" data-aos="fade-up">
+                    <summary>Are the treatments painful?</summary>
+                    <div>
+                        <p>We prioritize your comfort. Most non-surgical treatments involve minimal discomfort. For injectables, we often use topical numbing creams or very fine needles. Laser treatments might feel like a warm snapping sensation. Your specialist will discuss pain management options with you.</p>
+                    </div>
+                </details>
+                <details class="faq-item" data-aos="fade-up">
+                    <summary>How long is the downtime for most procedures?</summary>
+                    <div>
+                        <p>Downtime varies depending on the treatment. Many of our procedures, like neurotoxin injections and some fillers, have minimal to no downtime, allowing you to resume normal activities almost immediately. Laser treatments or deeper chemical peels might require a few days of social downtime. This will be thoroughly discussed during your consultation.</p>
+                    </div>
+                </details>
+                <details class="faq-item" data-aos="fade-up">
+                    <summary>How long do the results last?</summary>
+                    <div>
+                        <p>The longevity of results depends on the specific treatment, your individual metabolism, lifestyle, and skin care regimen. For example, neurotoxins typically last 3-4 months, while dermal fillers can last from 6 months to over a year. We will provide realistic expectations for each procedure.</p>
+                    </div>
+                </details>
+                <details class="faq-item" data-aos="fade-up">
+                    <summary>What are the payment options available?</summary>
+                    <div>
+                        <p>We accept various payment methods including major credit cards, debit cards, and EFT. Please contact our clinic for specific details on payment plans or financing options if available.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Booking Section (formerly Contact) -->
+    <section class="booking" id="booking"> <!-- ID changed to "booking" -->
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Book Your Appointment</h2>
+                <p>Ready to take the next step? Schedule your consultation or send us an inquiry. Our team is here to assist you.</p>
+            </div>
+            
+            <div class="booking-container">
+                <div class="booking-info" data-aos="fade-right">
+                    <h3>Get In Touch</h3>
+                    <p>We are conveniently located in Vaal, offering a serene and professional environment for all your aesthetic needs. Contact us today to learn more.</p>
+                    
+                    <div class="booking-item">
+                        <div class="booking-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="booking-text">
+                            <h4>Our Location</h4>
+                            <p>123 Ophir Estates Meyerton<br>Gauteng, South Africa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-item">
+                        <div class="booking-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="booking-text">
+                            <h4>Phone Us</h4>
+                            <p>General Enquiries: +27 76 603 8751<br>Bookings: +27 76 603 8751</p>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="booking-item">
+                        <div class="booking-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="booking-text">
+                            <h4>Email Us</h4>
+                            <p>info@lumiereaesthetics.co.za</p>
+                        </div>
+                    </div> -->
+                    
+                    <div class="booking-item">
+                        <div class="booking-icon"><i class="fas fa-clock"></i></div>
+                        <div class="booking-text">
+                            <h4>Clinic Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday & Public Holidays: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form" data-aos="fade-left">
+                    <h3>Send Us a Message</h3>
+                    <!-- 
+                        INSTRUCTIONS FOR FORMSPREE:
+                        1. Go to https://formspree.io/ and create an account.
+                        2. Create a new form and set its email to mazifounder@gmail.com.
+                        3. Replace "YOUR_FORM_ID_HERE" in the action URL below with your actual Form ID from Formspree.
+                           (e.g., action="https://formspree.io/f/abcdefgh")
+                    -->
+                    <form id="appointmentForm" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="e.g., 082 123 4567" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">-- Select a Service --</option>
+                                <option value="consultation">General Consultation</option>
+                                <option value="neurotoxin">Neurotoxin Injections (Botox/Dysport)</option>
+                                <option value="fillers">Dermal Fillers</option>
+                                <option value="laser">Laser Skin Resurfacing</option>
+                                <option value="peels">Chemical Peels</option>
+                                <option value="microneedling">Microneedling (CIT)</option>
+                                <option value="iv_drip">IV Drip Therapy</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message (Optional)</label>
+                            <textarea id="message" name="message" placeholder="Tell us a bit about your goals or ask any questions."></textarea>
+                        </div>
+                        
+                        <!-- Optional: Add a honeypot field for spam prevention if not using Formspree's reCAPTCHA -->
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <button type="submit" class="btn btn-primary">Send Message & Request Booking</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="0">
+                    <h3>Lumiére Aesthetics</h3>
+                    <p>Your sanctuary for advanced aesthetic treatments in Vaal. We are dedicated to enhancing your natural beauty and confidence through personalized, expert care.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#results">Results Gallery</a></li>
+                        <li><a href="#team">Meet Our Team</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#booking">Book Online</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Popular Treatments</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Neurotoxin Injections</a></li>
+                        <li><a href="#services">Dermal Fillers</a></li>
+                        <li><a href="#services">Laser Skin Rejuvenation</a></li>
+                        <li><a href="#services">Chemical Peels</a></li>
+                        <li><a href="#services">Microneedling</a></li>
+                        <li><a href="#services">IV Wellness Drips</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Contact Lumiére</h3>
+                    <ul class="footer-links footer-contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Radiant Drive, Vaal Triangle, Gauteng (Placeholder)</li>
+                        <li><i class="fas fa-phone-alt"></i> +27 16 123 4567 (Placeholder)</li>
+                        <li><i class="fas fa-envelope"></i> info@lumiereaesthetics.co.za (Placeholder)</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm | Sat: 9am-2pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© <span id="currentYear"></span> Lumiére Aesthetics Vaal. All Rights Reserved. Designed with Care.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // AOS Initialization
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            once: true,     // whether animation should happen only once - while scrolling down
+            offset: 100,    // offset (in px) from the original trigger point
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinksContainer = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            navLinksContainer.classList.toggle('active');
+            if (navLinksContainer.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>'; // Change to close icon
+            } else {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>'; // Change back to menu icon
+            }
+        });
+        
+        // Close mobile menu when clicking a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinksContainer.classList.contains('active')) {
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    navLinksContainer.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Header scroll effect & Active Nav Link
+        const header = document.getElementById('header');
+        const sections = document.querySelectorAll('section[id]');
+        const navHeaderLinks = document.querySelectorAll('.nav-links .nav-link[href^="#"]');
+
+        function scrollHeader() {
+            if (window.scrollY >= 80) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
+        
+        function highlightNavLink() {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - header.offsetHeight - 50; // Adjusted offset
+                if (window.pageYOffset >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navHeaderLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            scrollHeader();
+            highlightNavLink();
+        });
+        
+        // Animate stats counter
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const speed = 200; // Lower for faster animation
+            
+            statNumbers.forEach(stat => {
+                let hasAnimated = stat.getAttribute('data-animated');
+                if (hasAnimated === 'true') return; // Only animate once
+
+                const target = +stat.getAttribute('data-count');
+                let count = 0; // Start from 0
+                const increment = target / speed;
+                
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        stat.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCount); // Smoother animation
+                    } else {
+                        stat.innerText = target;
+                        stat.setAttribute('data-animated', 'true'); // Mark as animated
+                    }
+                };
+                updateCount();
+            });
+        }
+        
+        // Trigger stats animation when scrolled to (Intersection Observer API for better performance)
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        observer.unobserve(entry.target); // Stop observing after animation
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+            observer.observe(statsSection);
+        }
+        
+        // Smooth scrolling for anchor links (can be redundant with CSS html { scroll-behavior: smooth; } but offers more control if needed later)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href === "") return; // Ignore empty or # only links
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    e.preventDefault();
+                    const headerOffset = document.getElementById('header').offsetHeight || 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open after click
+                    if (navLinksContainer.classList.contains('active') && window.innerWidth < 769) {
+                        mobileMenuBtn.click();
+                    }
+                }
+            });
+        });
+        
+        // Form submission (Simplified for Formspree)
+        // Formspree handles the submission and redirection/messaging.
+        // You can add custom JS here if you want to use Formspree's AJAX submission for a more seamless experience without page reload.
+        // For now, the default form POST will work.
+        const appointmentForm = document.getElementById('appointmentForm');
+        if (appointmentForm) {
+            appointmentForm.addEventListener('submit', function(e) {
+                // Optional: Add a loading state to the button
+                const submitButton = this.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+                
+                // Formspree will handle the rest. If you want to display a custom success message
+                // on the same page, you would use Formspree's AJAX submission method.
+                // For default POST, Formspree redirects to its own thank you page or one you configure.
+            });
+        }
+
+        // Update Copyright Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    </script>
+</body>
+</html>
